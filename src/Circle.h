@@ -8,7 +8,7 @@ private:
     int r;
 
 public:
-    Circle(int r);
+    explicit Circle(int r);
     double getArea() const override;
     double getLength() const override;
 };

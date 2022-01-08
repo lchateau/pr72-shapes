@@ -11,7 +11,6 @@ private:
 
 public:
     Triangle(int a, int b, int c);
-    virtual ~Triangle(){};
     double getArea() const override;
     double getLength() const override;
 };
