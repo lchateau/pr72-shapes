@@ -6,19 +6,19 @@
 
 #include <stdexcept>
 
-Shape *ShapeFactory::createShape(const std::string &name)
+std::unique_ptr<Shape> ShapeFactory::createShape(const std::string &name)
 {
     if (name == "Circle")
     {
-        return new Circle(1);
+        return std::make_unique<Circle>(1);
     }
     if (name == "Rectangle")
     {
-        return new Rectangle(1, 1);
+        return std::make_unique<Rectangle>(1, 1);
     }
     else if (name == "Triangle")
     {
-        return new Triangle(1, 1, 1);
+        return std::make_unique<Triangle>(1, 1, 1);
     }
     throw std::invalid_argument("type " + name + " is not supported");
 }

@@ -12,7 +12,7 @@ int main(int argc, char const *argv[])
     Triangle t(3, 4, 5);
     std::cout << "Triangle (3,4,5) -> area: " << t.getArea() << ", length: " << t.getLength() << std::endl;
 
-    const Shape *s = ShapeFactory::createShape("Circle");
+    std::unique_ptr<Shape> s = ShapeFactory::createShape("Circle");
     std::cout << "Shape -> area: " << s->getArea() << ", length: " << s->getLength() << std::endl;
 
     Circle c(1);

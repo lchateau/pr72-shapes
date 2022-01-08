@@ -1,10 +1,11 @@
 #pragma once
 
 #include "Shape.h"
+#include <memory>
 #include <string>
 
 class ShapeFactory
 {
 public:
-    static Shape *createShape(const std::string &name);
+    static std::unique_ptr<Shape> createShape(const std::string &name);
 };
