@@ -1,5 +1,6 @@
 #include "ShapeFactory.h"
 
+#include "Circle.h"
 #include "Rectangle.h"
 #include "Triangle.h"
 
@@ -7,6 +8,10 @@
 
 Shape *ShapeFactory::createShape(const std::string &name)
 {
+    if (name == "Circle")
+    {
+        return new Circle(1);
+    }
     if (name == "Rectangle")
     {
         return new Rectangle(1, 1);
