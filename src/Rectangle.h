@@ -1,4 +1,6 @@
-class Rectangle
+#pragma once
+#include "Shape.h"
+class Rectangle : public Shape
 {
 private:
     int x;
@@ -6,6 +8,7 @@ private:
 
 public:
     Rectangle(int x, int y);
-    double getArea() const;
-    double getLength() const;
+    virtual ~Rectangle(){};
+    double getArea() const override;
+    double getLength() const override;
 };

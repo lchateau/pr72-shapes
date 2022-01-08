@@ -1,4 +1,8 @@
-class Triangle
+#pragma once
+
+#include "Shape.h"
+
+class Triangle : public Shape
 {
 private:
     int a;
@@ -7,6 +11,7 @@ private:
 
 public:
     Triangle(int a, int b, int c);
-    double getArea() const;
-    double getLength() const;
+    virtual ~Triangle(){};
+    double getArea() const override;
+    double getLength() const override;
 };
