@@ -6,12 +6,12 @@ Rectangle::Rectangle(int x, int y)
     this->y = y;
 }
 
-int Rectangle::getArea() const
+double Rectangle::getArea() const
 {
     return x * y;
 }
 
-int Rectangle::getLength() const
+double Rectangle::getLength() const
 {
-    return 2 * (x + 1);
+    return 2 * (x + y);
 }

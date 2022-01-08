@@ -6,6 +6,6 @@ private:
 
 public:
     Rectangle(int x, int y);
-    int getArea() const;
-    int getLength() const;
+    double getArea() const;
+    double getLength() const;
 };
