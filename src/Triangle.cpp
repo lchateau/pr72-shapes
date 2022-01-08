@@ -1,11 +1,8 @@
 #include "Triangle.h"
 #include <cmath>
 
-Triangle::Triangle(int a, int b, int c)
+Triangle::Triangle(int a, int b, int c) : a(a), b(b), c(c)
 {
-    this->a = a;
-    this->b = b;
-    this->c = c;
 }
 
 double Triangle::getArea() const

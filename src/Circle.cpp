@@ -1,9 +1,8 @@
 #include "Circle.h"
 #include <cmath>
 
-Circle::Circle(int r)
+Circle::Circle(int r) : r(r)
 {
-    this->r = r;
 }
 
 double Circle::getArea() const

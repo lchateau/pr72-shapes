@@ -1,9 +1,7 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(int x, int y)
+Rectangle::Rectangle(int x, int y) : x(x), y(y)
 {
-    this->x = x;
-    this->y = y;
 }
 
 double Rectangle::getArea() const
