@@ -4,6 +4,7 @@
 #include "Rectangle.h"
 #include "Triangle.h"
 #include "ShapeFactory.h"
+#include "A.h"
 
 int main(int argc, char const *argv[])
 {
@@ -48,6 +49,8 @@ int main(int argc, char const *argv[])
     pointerVector.push_back(&r3);
 
     std::cout << "End" << std::endl;
+
+    A a;
 
     return 0;
 }
