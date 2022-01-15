@@ -12,5 +12,5 @@ private:
 public:
     A();
     A(const A &a) = delete;
-    virtual ~A();
+    virtual ~A() = default;
 };

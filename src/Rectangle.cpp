@@ -23,11 +23,6 @@ Rectangle::Rectangle(Rectangle &&other) noexcept : x(other.x), y(other.y)
     std::cout << "Rectangle::Rectangle(Rectangle &&other)" << std::endl;
 }
 
-Rectangle::~Rectangle()
-{
-    // std::cout << "Rectangle::~Rectangle()" << std::endl;
-}
-
 double Rectangle::getArea() const
 {
     return x * y;

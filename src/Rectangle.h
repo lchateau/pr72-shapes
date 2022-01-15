@@ -13,7 +13,7 @@ public:
     Rectangle(int x, int y);
     Rectangle(const Rectangle &other);
     Rectangle(Rectangle &&other) noexcept;
-    virtual ~Rectangle();
+    ~Rectangle() override = default;
     double getArea() const override;
     double getLength() const override;
     std::ostream &print(std::ostream &os) const override;
