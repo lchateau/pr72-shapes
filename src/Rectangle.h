@@ -9,6 +9,7 @@ private:
     int y;
 
 public:
+    Rectangle();
     Rectangle(int x, int y);
     double getArea() const override;
     double getLength() const override;
