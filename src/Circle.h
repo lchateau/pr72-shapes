@@ -11,4 +11,5 @@ public:
     explicit Circle(int r);
     double getArea() const override;
     double getLength() const override;
+    std::ostream &print(std::ostream &os) const override;
 };

@@ -15,3 +15,15 @@ double Triangle::getLength() const
 {
     return a + b + c;
 }
+
+std::ostream &Triangle::print(std::ostream &os) const
+{
+    os << "Triangle(";
+    os << "a=" << a << ", ";
+    os << "b=" << b << ", ";
+    os << "c=" << c << ", ";
+    os << "area=" << getArea() << ", ";
+    os << "length=" << getLength();
+    os << ")" << std::endl;
+    return os;
+}

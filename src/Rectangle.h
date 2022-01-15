@@ -2,8 +2,6 @@
 
 #include "Shape.h"
 
-#include <iostream>
-
 class Rectangle : public Shape
 {
 private:
@@ -18,5 +16,5 @@ public:
     virtual ~Rectangle();
     double getArea() const override;
     double getLength() const override;
-    friend std::ostream &operator<<(std::ostream &os, const Rectangle &rectangle);
+    std::ostream &print(std::ostream &os) const override;
 };
