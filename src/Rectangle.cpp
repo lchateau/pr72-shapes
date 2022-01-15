@@ -16,11 +16,16 @@ Rectangle::Rectangle(const Rectangle &other) : x(other.x), y(other.y)
     std::cout << "Rectangle::Rectangle(const Rectangle &other)" << std::endl;
 }
 
-Rectangle::Rectangle(Rectangle &&other) : x(other.x), y(other.y)
+Rectangle::Rectangle(Rectangle &&other) noexcept : x(other.x), y(other.y)
 {
     other.x = 0;
     other.y = 0;
     std::cout << "Rectangle::Rectangle(Rectangle &&other)" << std::endl;
+}
+
+Rectangle::~Rectangle()
+{
+    std::cout << "Rectangle::~Rectangle()" << std::endl;
 }
 
 double Rectangle::getArea() const

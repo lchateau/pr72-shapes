@@ -14,7 +14,8 @@ public:
     Rectangle();
     Rectangle(int x, int y);
     Rectangle(const Rectangle &other);
-    Rectangle(Rectangle &&other);
+    Rectangle(Rectangle &&other) noexcept;
+    virtual ~Rectangle();
     double getArea() const override;
     double getLength() const override;
     friend std::ostream &operator<<(std::ostream &os, const Rectangle &rectangle);
